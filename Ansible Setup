@@ -1,0 +1,22 @@
+	yum update -y
+  sudo amazon-linux-extras install ansible2 -y
+	yum install git python python-level python-pip openssl -y 
+	vi /etc/ansible/hosts 
+	Vi etc/ansible/ansible.cfg
+
+RUN COMMANDS ON ALL NODES:
+	Useradd ansible
+	Passwd ansible
+	Visudo
+	Vim /etc/ssh/sshd_config
+	Systemctl restart sshd
+	Systemctl status sshd
+
+
+RUN THE COMMANDS ON ANSIBLE SERVER:
+
+	Ssh-keygen -- > enter 3 times
+	ssh-copy-id ansible@localhost
+	ssh ansible@localhost
+	Ssh-copy-id ansible@private-ipv4 
+	Ssh ansible@ private-ipv4
