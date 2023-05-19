@@ -11,3 +11,20 @@ docker info				: To see all the docker info running on our machine.
 docker swarm leave			: To down the docker node (need to wait few sec)
 docker node rm node-id			: To remove the node permanently
 docker swarm leave			: To delete the swarm but will get error
+docker swarm leave –force		: To delete the manager forcefully
+docker swarm join-token worker	: To get the token of the worker
+docker swarm join-token manager	: To get the token of the worker
+
+Creation:
+
+docker service create --name raham --replicas 3 --publish 80:80 httpd
+
+raham : service name replicas : nodes publish : port reference image: apache
+
+docker service ls 		: To list the services
+docker service ps service-name	: To see where the services are running
+docker ps			: To see the containers (Check all nodes once)
+docker rm -f names		: To remove the service (it will come again later)
+public ip on browser		: To check its up and running or not
+docker service inspect --pretty remo : To inspect the container
+docker service rm service-name	: To remove the service
