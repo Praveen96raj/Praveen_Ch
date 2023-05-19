@@ -1,3 +1,4 @@
+	Infrastructure of Swarm:
 	Create 3 node one is manager and another two are workers
 	Manager node: docker swarm init --advertise-addr 50.17.175.54 (public ip)
 	Run the below command to join the worker nodes
