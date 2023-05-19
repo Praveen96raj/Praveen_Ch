@@ -1,0 +1,12 @@
+	Create 3 node one is manager and another two are workers
+	Manager node: docker swarm init --advertise-addr 50.17.175.54 (public ip)
+	Run the below command to join the worker nodes
+	docker swarm join --token SWMTKN-1-65hfo219b79t18q9n3f9euzoe840k9f30hw7niiji7cwua8d0u-8g4fymwhfkrlbvxm1m2nb9hx8 50.17.175.54:2377
+	To check nodes on docker swarm: docker node ls 
+	Here * Indicates the current node like master branch on git
+	Now we created the docker swarm cluster
+
+docker info				: To see all the docker info running on our machine.
+docker swarm leave			: To down the docker node (need to wait few sec)
+docker node rm node-id			: To remove the node permanently
+docker swarm leave			: To delete the swarm but will get error
