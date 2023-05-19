@@ -1,0 +1,30 @@
+LOGIN TO SLAVE SERVER
+
+sudo useradd jenkins
+sudo passwd jenkins
+sudo visudo
+sudo vim /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo systemctl status sshd
+
+
+GO BACK TO MASTER
+
+sudo su jenkins
+ssh-keygen
+ssh-copy-id jenkins@localhost
+yes
+ssh jenkins@localhost
+exit 
+ssh-copy-id jenkins@public IPV4 of slave
+ssh jenkins@public IPV4 of Slave
+
+
+GO BACK TO SLAVE
+
+sudo su jenkins
+ssh jenkins@public IPV4 of Master
+yes 
+password
+
+logout and restart Jenkins
